@@ -21727,20 +21727,20 @@ lrwxrwxrwx 1 super_pro_hack_man super_pro_hack_man   22 мар 10 03:37 libboost
 11. Найдите топ10 самых "тяжёлых".
 
 ```bash
-$ du -ahx . | sort -rh | head -10
+$ find . -type f -print | xargs ls -lh | sort -rh -k5,5 | head
 ```
 
 Результат:
 ```bash
-207M	.
-155M	./include/boost
-155M	./include
-52M	./lib
-19M	./include/boost/phoenix
-17M	./include/boost/fusion
-13M	./include/boost/fusion/container
-12M	./include/boost/geometry
-8,3M	./include/boost/spirit
-6,7M	./include/boost/spirit/home
+-rw-rw-r-- 1 super_pro_hack_man super_pro_hack_man 4,7M мар 10 03:37 ./lib/libboost_wave.a
+-rw-rw-r-- 1 super_pro_hack_man super_pro_hack_man 4,5M мар 10 03:37 ./lib/libboost_log.a
+-rw-rw-r-- 1 super_pro_hack_man super_pro_hack_man 3,1M мар 10 03:37 ./lib/libboost_math_tr1l.a
+-rw-rw-r-- 1 super_pro_hack_man super_pro_hack_man 3,1M мар 10 03:37 ./lib/libboost_math_tr1f.a
+-rw-rw-r-- 1 super_pro_hack_man super_pro_hack_man 3,1M мар 10 03:37 ./lib/libboost_math_tr1.a
+-rw-rw-r-- 1 super_pro_hack_man super_pro_hack_man 2,8M мар 10 03:37 ./lib/libboost_regex.a
+-rw-rw-r-- 1 super_pro_hack_man super_pro_hack_man 2,7M мар 10 03:37 ./lib/libboost_log_setup.a
+-rw-rw-r-- 1 super_pro_hack_man super_pro_hack_man 2,4M мар 10 03:37 ./lib/libboost_unit_test_framework.a
+-rw-rw-r-- 1 super_pro_hack_man super_pro_hack_man 2,4M мар 10 03:37 ./lib/libboost_test_exec_monitor.a
+-rw-rw-r-- 1 super_pro_hack_man super_pro_hack_man 2,3M мар 10 03:37 ./include/boost/typeof/vector200.hpp
 ```
 
